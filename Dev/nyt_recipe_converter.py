@@ -29,6 +29,7 @@ import urllib.request
 
 _recipe_url = "https://cooking.nytimes.com/recipes/***" # *** to be replaced by the recipe number
 _max_fails = 20
+_save_directory = "ScrapedRecipes/"
 
 
 def get_recipe_number():
@@ -65,6 +66,13 @@ def get_recipe_title(html_data):
 	recipe_title = html_data.split("\"@type\":\"Recipe\",\"name\":\"")[1].split("\",\"")[0]
 
 	return recipe_title
+
+
+def get_recipe_author(html_data):
+	recipe_author = html_data.split("\"author\":{\"@type\":\"Person\",\"name\":\"")[1].split("\"},")[0]
+	recipe_author = "Author: " + recipe_author
+
+	return recipe_author
 
 
 def get_recipe_description(html_data):
@@ -149,7 +157,7 @@ def parse_howtosteps(steps_string):
 	ind = 0
 
 	for i in recipe_steps: # add step numbers
-		recipe_steps[ind] = f"{ind + 1}. " + i
+		recipe_steps[ind] = f"{ind + 1}. " + i + "\n"
 		ind += 1
 
 	return recipe_steps
@@ -165,13 +173,14 @@ def get_recipe_steps(html_data):
 
 	except: # if it's not present we have a HowToSteps formatted page 
 		recipe_steps = parse_howtosteps(steps_string)
-		
 
 	return recipe_steps
 
 
 def generate_recipe_file(html_data):
 	recipe_title = get_recipe_title(html_data)
+	recipe_author = get_recipe_author(html_data)
+	recipe_rating = get_recipe_rating(html_data)
 	recipe_description = get_recipe_description(html_data)
 	recipe_ingredients = get_recipe_ingredients(html_data)
 	recipe_steps = get_recipe_steps(html_data)
@@ -180,6 +189,8 @@ def generate_recipe_file(html_data):
 
 	with open(file_name, 'w', encoding='utf-8') as file:
 		file.write(recipe_title + "\n\n")
+		file.write(recipe_author + "\n\n")
+		file.write(recipe_rating + "\n\n")
 		file.write(recipe_description + "\n\n\n")
 
 		for i in recipe_ingredients:
@@ -188,7 +199,7 @@ def generate_recipe_file(html_data):
 		file.write("\n\n")
 
 		for i in recipe_steps:
-			file.write(i + "\n\n")
+			file.write(i + "\n")
 
 	print("\nGenerated the recipe file: " + file_name)
 
@@ -224,15 +235,4 @@ def scrape_recipes():
 recipe_number = get_recipe_number()
 html_data = get_html_data(recipe_number)
 stripped_html_data = strip_content(html_data)
-print(get_recipe_title(stripped_html_data) + "\n\n")
-print(get_recipe_description(stripped_html_data) + "\n\n")
-print(get_recipe_rating(stripped_html_data) + "\n\n")
-#print(get_recipe_ingredients(stripped_html_data))
-steps = get_recipe_steps(stripped_html_data)
-
-with open("steps_list.txt", 'w', encoding='utf-8') as file:
-	for step in steps:
-		file.write(step + "\n")
-
-with open("stripped_html_data.txt", 'w', encoding='utf-8') as file:
-	file.write(stripped_html_data)
+generate_recipe_file(stripped_html_data)
