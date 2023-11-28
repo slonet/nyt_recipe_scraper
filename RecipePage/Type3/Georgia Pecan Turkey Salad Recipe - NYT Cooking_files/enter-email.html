@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- saved from url=(0248)https://myaccount.nytimes.com/auth/iframe/enter-email?response_type=cookie&client_id=cooking&redirect_uri=https%3A%2F%2Fcooking.nytimes.com%2Frecipes%2F10-georgia-pecan-turkey-salad&display=default&application=Cooking&preloaded=false#lire-ui-511563 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Enter email - The New York Times</title>
+
+    
+    <meta name="sourceApp" content="nyt-lire">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="et2Host" content="https://a.et.nytimes.com/">
+
+    <style>
+        @font-face {
+            font-family: nyt-franklin;
+            src: url(//typeface.nyt.com/fonts/nyt-franklin-300-normal.woff)
+            format('woff');
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: nyt-franklin;
+            src: url(//typeface.nyt.com/fonts/nyt-franklin-500-normal.woff)
+            format('woff');
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background: #fff;
+            position: relative;
+            margin: 0;
+            font-size: 16px;
+            font-family: 'nyt-franklin', arial, helvetica, sans-serif;
+            -moz-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body.embedded {
+            height: auto;
+            overflow: hidden;
+        }
+
+        .full-page {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 0 0 auto;
+            height: 100%;
+        }
+    </style>
+    <script async="" src="./tags.js.download"></script><script>
+    /* eslint-disable */
+    /**
+     * Provided by Akamai for integration with mPulse.
+     * Original source available from mPulse settings.
+     * See https://developer.akamai.com/akamai-mpulse-real-user-monitoring-solution for more details.
+     */
+    (function() {
+      // Boomerang Loader Snippet version 14
+      if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+          return;
+      }
+    
+      window.BOOMR = window.BOOMR || {};
+      window.BOOMR.snippetStart = new Date().getTime();
+      window.BOOMR.snippetExecuted = true;
+      window.BOOMR.snippetVersion = 14;
+    
+      window.BOOMR.url = "https://s.go-mpulse.net/boomerang/" +
+        "ATH8A-MAMN8-XPXCH-N5KAX-8D239";
+    
+      var // document.currentScript is supported in all browsers other than IE
+          where = document.currentScript || document.getElementsByTagName("script")[0],
+          // Parent element of the script we inject
+          parentNode = where.parentNode,
+          // Whether or not Preload method has worked
+          promoted = false,
+          // How long to wait for Preload to work before falling back to iframe method
+          LOADER_TIMEOUT = 3000;
+    
+      // Tells the browser to execute the Preloaded script by adding it to the DOM
+      function promote() {
+          if (promoted) {
+              return;
+          }
+    
+          var script = document.createElement("script");
+          script.id = "boomr-scr-as";
+          script.src = window.BOOMR.url;
+    
+          // Not really needed since dynamic scripts are async by default and the script is already in cache at this point,
+          // but some naive parsers will see a missing async attribute and think we're not async
+          script.async = true;
+    
+          parentNode.appendChild(script);
+    
+          promoted = true;
+      }
+    
+      // Non-blocking iframe loader (fallback for non-Preload scenarios) for all recent browsers.
+      // For IE 6/7, falls back to dynamic script node.
+      function iframeLoader(wasFallback) {
+          promoted = true;
+    
+          var dom, doc = document, bootstrap, iframe, iframeStyle, win = window;
+    
+          window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
+    
+          // Adds Boomerang within the iframe
+          bootstrap = function(parent, scriptId) {
+              var script = doc.createElement("script");
+              script.id = scriptId || "boomr-if-as";
+              script.src = window.BOOMR.url;
+    
+              BOOMR_lstart = new Date().getTime();
+    
+              parent = parent || doc.body;
+              parent.appendChild(script);
+          };
+    
+          // For IE 6/7, we'll just load the script in the current frame, as those browsers don't support 'about:blank'
+          // for an iframe src (it triggers warnings on secure sites).  This means loading on IE 6/7 may cause SPoF.
+          if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]\./)) {
+              window.BOOMR.snippetMethod = "s";
+    
+              bootstrap(parentNode, "boomr-async");
+              return;
+          }
+    
+          // The rest of this function is IE8+ and other browsers that don't support Preload hints but will work with CSP & iframes
+          iframe = document.createElement("IFRAME");
+    
+          // An empty frame
+          iframe.src = "about:blank";
+    
+          // We set title and role appropriately to play nicely with screen readers and other assistive technologies
+          iframe.title = "";
+          iframe.role = "presentation";
+    
+          // Ensure we're not loaded lazily
+          iframe.loading = "eager";
+    
+          // Hide the iframe
+          iframeStyle = (iframe.frameElement || iframe).style;
+          iframeStyle.width = 0;
+          iframeStyle.height = 0;
+          iframeStyle.border = 0;
+          iframeStyle.display = "none";
+    
+          // Append to the end of the current block
+          parentNode.appendChild(iframe);
+    
+          // Try to get the iframe's document object
+          try {
+              win = iframe.contentWindow;
+              doc = win.document.open();
+          }
+          catch (e) {
+              // document.domain has been changed and we're on an old version of IE, so we got an access denied.
+              // Note: the only browsers that have this problem also do not have CSP support.
+    
+              // Get document.domain of the parent window
+              dom = document.domain;
+    
+              // Set the src of the iframe to a JavaScript URL that will immediately set its document.domain to match the parent.
+              // This lets us access the iframe document long enough to inject our script.
+              // Our script may need to do more domain massaging later.
+              iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void 0;";
+              win = iframe.contentWindow;
+    
+              doc = win.document.open();
+          }
+    
+          if (dom) {
+              // Unsafe version for IE8 compatibility. If document.domain has changed, we can't use win, but we can use doc.
+              doc._boomrl = function() {
+                  this.domain = dom;
+                  bootstrap();
+              };
+    
+              // Run our function at load.
+              // Split the string so HTML code injectors don't get confused and add code here.
+              doc.write("<bo" + "dy onload='document._boomrl();'>");
+          }
+          else {
+              // document.domain hasn't changed, regular method should be OK
+              win._boomrl = function() {
+                  bootstrap();
+              };
+    
+              if (win.addEventListener) {
+                  win.addEventListener("load", win._boomrl, false);
+              }
+              else if (win.attachEvent) {
+                  win.attachEvent("onload", win._boomrl);
+              }
+          }
+    
+          // Finish the document
+          doc.close();
+      }
+    
+      // See if Preload is supported or not
+      var link = document.createElement("link");
+    
+      if (link.relList &&
+          typeof link.relList.supports === "function" &&
+          link.relList.supports("preload") &&
+          ("as" in link)) {
+          window.BOOMR.snippetMethod = "p";
+    
+          // Set attributes to trigger a Preload
+          link.href = window.BOOMR.url;
+          link.rel  = "preload";
+          link.as   = "script";
+    
+          // Add our script tag if successful, fallback to iframe if not
+          link.addEventListener("load", promote);
+          link.addEventListener("error", function() {
+              iframeLoader(true);
+          });
+    
+          // Have a fallback in case Preload does nothing or is slow
+          setTimeout(function() {
+              if (!promoted) {
+                  iframeLoader(true);
+              }
+          }, LOADER_TIMEOUT);
+    
+          // Note the timestamp we started trying to Preload
+          BOOMR_lstart = new Date().getTime();
+    
+          // Append our link tag
+          parentNode.appendChild(link);
+      }
+      else {
+          // No Preload support, use iframe loader
+          iframeLoader(false);
+      }
+    
+      // Save when the onload event happened, in case this is a non-NavigationTiming browser
+      function boomerangSaveLoadTime(e) {
+          window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+      }
+    
+      if (window.addEventListener) {
+          window.addEventListener("load", boomerangSaveLoadTime, false);
+      }
+      else if (window.attachEvent) {
+          window.attachEvent("onload", boomerangSaveLoadTime);
+      }
+    })();
+    </script><link href="https://s.go-mpulse.net/boomerang/ATH8A-MAMN8-XPXCH-N5KAX-8D239" rel="preload" as="script"><style data-emotion="css-global"></style><style data-emotion="css"></style><iframe src="./saved_resource(2).html" title="" role="presentation" loading="eager" style="width: 0px; height: 0px; border: 0px; display: none;"></iframe></head>
+<body class="embedded">
+<script>
+    
+!function(s,e){var c,p,_,d,l,u,f=[],g={pv_id:"",ctx_id:"",intra:!1,force_xhr:!1,
+store_last_response:!1},
+v="object"==typeof s.navigator&&"string"==typeof s.navigator.userAgent&&/iP(ad|hone|od)/.test(
+s.navigator.userAgent),y="object"==typeof s.navigator&&s.navigator.sendBeacon,
+h=y?v?"xhr_ios":"beacon":"xhr";function b(){var e,t,n=s.crypto||s.msCrypto;if(n)t=n.getRandomValues(
+new Uint8Array(18));else for(t=[];t.length<18;)t.push(256*Math.random()^255&(e=e||+new Date)),
+e=Math.floor(e/256);return btoa(String.fromCharCode.apply(String,t)).replace(/\+/g,"-").replace(
+/\//g,"_")}if(s.nyt_et)try{console.warn("et2 snippet should only load once per page")}catch(e
+){}else s.nyt_et=function(){var e,t,n,o,r=arguments;function i(e){f.length&&(function(e,t,n,o,r){if(
+!o&&("beacon"===h||y&&n)){var i=s.navigator.sendBeacon(e,t);return r&&(u=i)}
+var a="undefined"!=typeof XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP")
+;a.open("POST",e),a.withCredentials=!0,a.setRequestHeader("Accept","*/*"),
+"string"==typeof t?a.setRequestHeader("Content-Type","text/plain;charset=UTF-8"
+):"[object Blob]"==={}.toString.call(t)&&t.type&&a.setRequestHeader("Content-Type",t.type),
+r&&!a.onload&&(a.onload=function(){u=a.response},a.onerror=function(e){u=!1}),a.send(t)}(c+"track",
+JSON.stringify(f),e,g.force_xhr,g.store_last_response),f.length=0,clearTimeout(l),l=null)}if(
+"string"==typeof r[0]&&/init/.test(r[0])&&(g=function(e,t){var n="",o="",r=!1,i=!1,a=!1;if(
+"string"==typeof e&&"init"==e&&"object"==typeof t&&("boolean"==typeof t.intranet&&t.intranet&&(r=!0)
+,"boolean"==typeof t.force_xhr&&t.force_xhr&&(i=!0),
+"boolean"==typeof t.store_last_response&&t.store_last_response&&(a=!0),
+"string"==typeof t.pv_id_override&&"string"==typeof t.ctx_id_override))if(
+24<=t.pv_id_override.length&&24<=t.ctx_id_override.length)n=t.pv_id_override,
+o=t.ctx_id_override;else try{console.warn("override id(s) must be >= 24 chars long")}catch(e){}
+return{pv_id:n,ctx_id:o,intra:r,store_last_response:a,force_xhr:i}}(r[0],r[3]),_=g.pv_id||b(),
+"init"==r[0]&&!p)){if(p=g.ctx_id||b(),"string"!=typeof r[1]||!/^http/.test(r[1]))throw new Error(
+"init must include an et host url");if(c=String(r[1]).replace(/([^\/])$/,"$1/"),
+"string"!=typeof r[2])throw new Error("init must include a source app name");d=r[2]}var a=r.length-1
+;r[a]&&"object"==typeof r[a]&&(e=r[a]),e||/init/.test(r[0])?e&&!e.subject&&console.warn(
+"event data {} must include a subject"):console.warn(
+"when invoked without 'init' or 'pageinit', nyt_et() must include a event data"),c&&e&&e.subject&&(
+t=e.subject,delete e.subject,o="page_exit"==t||"ob_click"==(e.eventData||{}).type,
+n="page"==t||"page_soft"==t?_:b(),f.push({context_id:p,pageview_id:_,event_id:n,client_lib:"v1.2.0",
+sourceApp:d,intranet:g.intra?1:void 0,subject:t,how:o&&v&&y?"beacon_ios":h,client_ts:+new Date,
+data:JSON.parse(JSON.stringify(e))}),"send"==r[0]||n==_||o?i(o):l||(l=setTimeout(i,5500)))},
+s.nyt_et.get_pageview_id=function(){return _},s.nyt_et.get_context_id=function(){return p},
+s.nyt_et.get_host=function(){return c},s.nyt_et.get_last_send_response=function(){var e=u
+;return e&&(u=null),e}}(window);
+
+
+    var referrer = document.referrer || null;
+    var sourceApp = document.querySelector('meta[name=sourceApp]') || {};
+    var sourceAppContent = sourceApp.content || null;
+    var et2Host = document.querySelector('meta[name=et2Host]') || {};
+    var url = et2Host.content || 'https://a.et.nytimes.com/';
+    var isIframe = window !== window.parent;
+
+    nyt_et('init', url, sourceAppContent, {
+        subject: 'page',
+        url: location.href,
+        referrer: referrer,
+        client_tz_offset: (new Date).getTimezoneOffset(),
+        is_iframe: isIframe
+    });
+</script><script>
+  !function(r){var n,t;r="undefined"!=typeof globalThis?globalThis:r||self,n=r.Abra,(t=r.Abra=function(){"use strict";var r=Array.isArray,n=function(r,n,t){var e=r(t,n),u=e[0],o=e[1];if(null==u||""===u)return n;for(var i=String(u).split("."),a=0;a<i.length&&(n=n[i[a]]);a++);return null==n&&(n=o),null!=n?n:null},t=function(r,n,t){return r(t,n).reduce((function(r,n){return parseFloat(r)+parseFloat(n)}),0)},e=function(r,n,t){var e=r(t,n);return e[0]/e[1]},u=function(r,n,t){var e=r(t,n);return e[0]%e[1]},o=function(r,n,t){return r(t,n).reduce((function(r,n){return parseFloat(r)*parseFloat(n)}),1)},i=function(r,n,t){var e=r(t,n),u=e[0],o=e[1];return void 0===o?-u:u-o};function a(n){return!(r(n)&&0===n.length||!n)}var f=function(r,n,t){for(var e,u=0;u<t.length;u++)if(!a(e=r(t[u],n)))return e;return e},c=function(r,n,t){var e;for(e=0;e<t.length-1;e+=2)if(a(r(t[e],n)))return r(t[e+1],n);return t.length===e+1?r(t[e],n):null},l=function(r,n,t){return!a(r(t,n)[0])},v=function(r,n,t){for(var e,u=0;u<t.length;u++)if(a(e=r(t[u],n)))return e;return e},d=function(r,n,t){var e=r(t,n);return e[0]===e[1]},s=function(r,n,t){var e=r(t,n);return e[0]!==e[1]},h=function(r,n,t){var e=r(t,n),u=e[0],o=e[1];return!(!o||void 0===o.indexOf)&&-1!==o.indexOf(u)},g=function(r,n,t){var e=r(t,n);return e[0]>e[1]},p=function(r,n,t){var e=r(t,n);return e[0]>=e[1]},b=function(r,n,t){var e=r(t,n),u=e[0],o=e[1],i=e[2];return void 0===i?u<o:u<o&&o<i},w=function(r,n,t){var e=r(t,n),u=e[0],o=e[1],i=e[2];return void 0===i?u<=o:u<=o&&o<=i},y=function(r,n,t){var e=t[0],u=t[1],o=t.slice(2),i=r(e,n);if(!i)return null;if(0===o.length)return null;if(1===o.length)return r(o[0],n);if(4294967295===o[0])return r(o[1],n);for(var a=function(r){var n,t,e,u,o,i=[],a=[t=1732584193,e=4023233417,~t,~e,3285377520],f=[],c=unescape(encodeURI(r))+"\x80",l=c.length;for(f[r=--l/4+2|15]=8*l;~l;)f[l>>2]|=c.charCodeAt(l)<<8*~l--;for(n=l=0;n<r;n+=16){for(t=a;l<80;t=[t[4]+(i[l]=l<16?~~f[n+l]:2*c|c<0)+1518500249+[e&u|~e&o,c=341275144+(e^u^o),882459459+(e&u|e&o|u&o),c+1535694389][l++/5>>2]+((c=t[0])<<5|c>>>27),c,e<<30|e>>>2,u,o])c=i[l-3]^i[l-8]^i[l-14]^i[l-16],e=t[1],u=t[2],o=t[3];for(l=5;l;)a[--l]+=t[l]}return a[0]>>>0}(i+" "+r(u,n));o.length>1;){var f=o.splice(0,2),c=f[0],l=f[1];if(a<=r(c,n))return r(l,n)}return 0===o.length?null:r(o[0],n)},k=function(r,n,t){var e=t[0],u=t[1],o=r(e,n);return null==o?null:new RegExp(u).test(o)};return function(a,m,O,A){void 0===a&&(a={}),void 0===m&&(m={}),void 0===O&&(O={}),void 0===A&&(A=!1);var j=function(){var r={},n=function(n){if(n)for(var t,e=decodeURIComponent(n[1]),u=/(?:^|,)([^,=]+)=([^,]*)/g;t=u.exec(e);){var o=t,i=o[1],a=o[2];r[i]=a||null}};n(document.cookie.match(/(?:^|;) *abra-overrides=([^;]+)/)),n(window.location.search.match(/(?:\?|&)abra-overrides=([^&]+)/));var t=/(?:^|;) *abra-nuke=true(?:;|$)/.test(document.cookie)||/(?:\?|&)abra-nuke=true(?:&|$)/.test(window.location.search);return[r,t]}(),x=j[0],E=j[1];Object.keys(O).forEach((function(r){x[r]=O[r]}));var F,C=A||E,R=(F={var:n,if:c,"===":d,"!==":s,and:f,or:v,"!":l,">":g,">=":p,"<":b,"<=":w,"+":t,"-":i,"*":o,"/":e,"%":u,in:h,abtest_partition:y,regex_match:k,ref:function(r,n,t){var e=r(t,n)[0];return U(e)}},function n(t,e){if(e||(e={}),r(t))return t.map((function(r){return n(r,e)}));if(!function(n){return"object"==typeof n&&null!==n&&!r(n)&&1===Object.keys(n).length}(t))return t;var u=function(r){return Object.keys(r)[0]}(t),o=t[u];r(o)||(o=[o]);var i=F[u];if(!i)throw new Error("Unrecognized operation "+u);return i(n,e,o)}),U=function(r){if(!r)return null;var n=x[r];if(void 0===n){if(!C){if(Object.prototype.hasOwnProperty.call(x,r))throw new Error("circular logic");x[r]=void 0,n=R(a[r],m)}void 0===n&&(n=null),x[r]=n}return n};return U}}()).noConflict=function(){return r.Abra=n,t}}(this);
+
+</script><script>
+if ('5F35800FA2155BC5833193CFCB9E4D') {
+    !function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c), n = b.getElementsByTagName(c)[0];
+        m.async = 1, m.src = d, n.parentNode.insertBefore(m, n);
+    }(window, document, "script", "https://dd.nytimes.com/tags.js", '5F35800FA2155BC5833193CFCB9E4D', {
+       ajaxListenerPath: "nytimes.com/svc/lire_ui/",
+       endpoint: "https://dd.nytimes.com/js/",
+    });
+}
+</script>
+<div id="myAccountAuth" class="embedded" data-auth-options="{&quot;abraConfig&quot;:{&quot;.ver&quot;:15967,&quot;SJ_morningAutoOptIn_0522&quot;:{&quot;if&quot;:[{&quot;and&quot;:[{&quot;===&quot;:[{&quot;var&quot;:&quot;geo_country&quot;},&quot;US&quot;]}]},{&quot;abtest_partition&quot;:[{&quot;var&quot;:&quot;agent_id&quot;},&quot;SJ_morningAutoOptIn_0522&quot;,4294967295,&quot;1_Opt_In&quot;]}]},&quot;AUTH_ssoGuardrailsFlow&quot;:{&quot;abtest_partition&quot;:[{&quot;var&quot;:&quot;agent_id&quot;},&quot;AUTH_ssoGuardrailsFlow&quot;,4294967295,&quot;0_Control&quot;]},&quot;AUTH_B2B_SSO&quot;:{&quot;abtest_partition&quot;:[{&quot;var&quot;:&quot;agent_id&quot;},&quot;AUTH_B2B_SSO&quot;,4294967295,&quot;0_Control&quot;]}},&quot;asset&quot;:&quot;&quot;,&quot;authToken&quot;:&quot;H4sIAAAAAAAAA4VQy27DIBD8F85xzNpeG3ztqV8RrWFJUYiNgFS10vx7adT22uPOSzN7F0u3iNlRyHwQJnhei7diFmbbLn49i4OwPsdAe8UsO7qFUjH+iD5xFjNMEqDrJ4UHEd+fTgCpGC0PMAwdstYDmH6cFGitsYqrPTFZTq/f6udla5gpp1vyFXkrJea5bX8aHNe9+Cvno9mubZX5yLkF2Zx5S2dPTWRDa1Nu6cJ7kymQfUbmuK2ZT2WP/LuGK1HSRcx3QTEGb6j4ba3sy9/WxI5T4lSrhH+qiMfjE0hJ6XrVoek1WUKlHKK1A6BbBqMn1Eo7lFNVjcuIY19fyEBmmTpgiV/qTDp6fgEAAA==&quot;,&quot;campaignId&quot;:&quot;&quot;,&quot;clientId&quot;:&quot;cooking&quot;,&quot;currentYear&quot;:&quot;2023&quot;,&quot;displayVariation&quot;:&quot;default&quot;,&quot;topLevelError&quot;:&quot;&quot;,&quot;userName&quot;:&quot;&quot;,&quot;displayType&quot;:&quot;embedded&quot;,&quot;environment&quot;:&quot;production&quot;,&quot;eventTrackerUrl&quot;:&quot;//et.nytimes.com/&quot;,&quot;hostName&quot;:&quot;https://myaccount.nytimes.com&quot;,&quot;jkiddHost&quot;:&quot;a.nytimes.com&quot;,&quot;mnlConsentRequired&quot;:false,&quot;mnlConsentHidden&quot;:true,&quot;preferredView&quot;:&quot;enterEmail&quot;}"><div class="css-vxwdm0-IframeBody exf7q5h0"><div class="css-1k28tcn-formStyles-formStyles-EnterEmailSsoBottom"><form name="Lire-UI-Form" method="POST" data-testid="enter-email-form" novalidate="" class="css-d4tm4z-StyledForm e1e6zg661"><div class="css-1pd93lg-FormBox es4z1fx0"><div class="css-0"><h2 class="css-1hf5gms e3d5db10">Enter your email address <br>to log in or create an account.</h2></div><div class="css-0"><fieldset type="email" class="css-bgwg67-FieldHolder e1e6zg662"><label for="email" class="css-sfogtm-InputLabel e1e6zg660">Email Address</label><div class="css-1g8s7vj-FieldWrapper e1e6zg663"><div class="css-1aaraqy-FieldBox e1e6zg664"><input id="email" name="email" type="email" placeholder="" maxlength="64" autocapitalize="off" autocomplete="username" tabindex="0" aria-hidden="false" class="css-11g480x-InputBox e1e6zg665" value="tyler.slone47@gmail.com"><div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"><template shadowrootmode="open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-lastpass-icon="true" style="position: absolute; cursor: pointer; height: 22px; max-height: 22px; width: 22px; max-width: 22px; top: 11px; left: 271.4px; z-index: auto; color: rgb(215, 64, 58);"><rect x="0.680176" y="0.763062" width="22.6392" height="22.4737" rx="4" fill="currentColor"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M19.7935 7.9516C19.7935 7.64414 20.0427 7.3949 20.3502 7.3949C20.6576 7.3949 20.9069 7.64414 20.9069 7.9516V16.0487C20.9069 16.3562 20.6576 16.6054 20.3502 16.6054C20.0427 16.6054 19.7935 16.3562 19.7935 16.0487V7.9516Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.76288 13.6577C5.68525 13.6577 6.43298 12.9154 6.43298 11.9998C6.43298 11.0842 5.68525 10.3419 4.76288 10.3419C3.8405 10.3419 3.09277 11.0842 3.09277 11.9998C3.09277 12.9154 3.8405 13.6577 4.76288 13.6577Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3298 13.6577C11.2521 13.6577 11.9999 12.9154 11.9999 11.9998C11.9999 11.0842 11.2521 10.3419 10.3298 10.3419C9.4074 10.3419 8.65967 11.0842 8.65967 11.9998C8.65967 12.9154 9.4074 13.6577 10.3298 13.6577Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.8964 13.6577C16.8188 13.6577 17.5665 12.9154 17.5665 11.9998C17.5665 11.0842 16.8188 10.3419 15.8964 10.3419C14.974 10.3419 14.2263 11.0842 14.2263 11.9998C14.2263 12.9154 14.974 13.6577 15.8964 13.6577Z" fill="white"></path></svg></template></div></div></div></fieldset></div><fieldset type="hidden" class="css-1ivqm8h-FieldHolder e1e6zg662"><label class="css-sfogtm-InputLabel e1e6zg660"></label><div class="css-1g8s7vj-FieldWrapper e1e6zg663"><div class="css-1aaraqy-FieldBox e1e6zg664"><input name="abraTests" type="hidden" placeholder="" autocapitalize="off" autocomplete="off" tabindex="-1" aria-hidden="true" class="css-11g480x-InputBox e1e6zg665" value="{&quot;AUTH_ssoGuardrailsFlow&quot;:&quot;0_Control&quot;,&quot;AUTH_B2B_SSO&quot;:&quot;0_Control&quot;}"></div></div></fieldset><input name="hiddenPassword" type="password" autocomplete="on" readonly="" aria-hidden="true" tabindex="-1" class="css-68379f-HiddenInput e1ncb6gr0"><div data-testid="api-error" class="css-i6wesg-ApiError-ApiError"></div><div class="css-bho3kg-buttonWrapper-buttonStyles-Button"><button type="submit" tabindex="0" data-testid="submit-email" class="css-5yyrqo-buttonBox-buttonBox-primaryButton-primaryButton-Button">Continue</button></div><div class="css-stk443-Separator e9txe1z0"><span>or</span></div><div class="legal-disclaimer css-1nire9v-legalDisclaimer-legalDisclaimer-LegalDisclaimer"><p>By continuing, you agree to the updated <a href="https://help.nytimes.com/hc/en-us/articles/115014893968-Terms-of-Sale" target="_blank" rel="noopener noreferrer">Terms of Sale</a>, <a href="https://help.nytimes.com/hc/en-us/articles/115014893428-Terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a>, and <a href="https://www.nytimes.com/privacy/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p></div><div class="css-emaox7-ButtonsMainContainer e1ydmvdg0"><div data-testid="google-sso" class="css-1efeuj4-ButtonContainer e1ydmvdg2"><button data-testid="google-sso-button" data-provider="google" id="js-google-oauth-login" tabindex="0" class="css-1g8ewsb-Button e1ydmvdg3"><span class="css-oxvjfq-ButtonIcon e1ydmvdg4"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.64 9.20468C17.64 8.5665 17.5827 7.95286 17.4764 7.36377H9V10.8451H13.8436C13.635 11.9701 13.0009 12.9233 12.0477 13.5615V15.8197H14.9564C16.6582 14.2529 17.64 11.9456 17.64 9.20468Z" fill="#4285F4"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.99976 18C11.4298 18 13.467 17.1941 14.9561 15.8195L12.0475 13.5613C11.2416 14.1013 10.2107 14.4204 8.99976 14.4204C6.65567 14.4204 4.67158 12.8372 3.96385 10.71H0.957031V13.0418C2.43794 15.9831 5.48158 18 8.99976 18Z" fill="#34A853"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.96409 10.7098C3.78409 10.1698 3.68182 9.59301 3.68182 8.99983C3.68182 8.40664 3.78409 7.82983 3.96409 7.28983V4.95801H0.957273C0.347727 6.17301 0 7.54755 0 8.99983C0 10.4521 0.347727 11.8266 0.957273 13.0416L3.96409 10.7098Z" fill="#FBBC05"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.99976 3.57955C10.3211 3.57955 11.5075 4.03364 12.4402 4.92545L15.0216 2.34409C13.4629 0.891818 11.4257 0 8.99976 0C5.48158 0 2.43794 2.01682 0.957031 4.95818L3.96385 7.29C4.67158 5.16273 6.65567 3.57955 8.99976 3.57955Z" fill="#EA4335"></path></svg></span><span class="css-1fy0ir9-ButtonText e1ydmvdg5">Continue with Google</span></button></div><div data-testid="facebook-sso" class="css-1efeuj4-ButtonContainer e1ydmvdg2"><button data-testid="facebook-sso-button" data-provider="facebook" id="js-facebook-oauth-login" tabindex="0" class="css-1g8ewsb-Button e1ydmvdg3"><span class="css-oxvjfq-ButtonIcon e1ydmvdg4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="#1977F3"></path><path d="M15.5033 14.603L15.902 12.0009H13.4061V10.3125C13.4061 9.60123 13.7542 8.9064 14.873 8.9064H16.0083V6.69155C16.0083 6.69155 14.9781 6.51562 13.9934 6.51562C11.938 6.51562 10.5939 7.761 10.5939 10.0176V12.0009H8.30811V14.603H10.5939V20.8919C11.052 20.964 11.5216 21.0007 12 21.0007C12.4784 21.0007 12.948 20.9628 13.4061 20.8919V14.603H15.5033Z" fill="white"></path></svg></span><span class="css-1fy0ir9-ButtonText e1ydmvdg5">Continue with Facebook</span></button></div><div data-testid="apple-sso" class="css-1efeuj4-ButtonContainer e1ydmvdg2"><button data-testid="apple-sso-button" data-provider="apple" id="js-apple-oauth-login" tabindex="0" class="css-1g8ewsb-Button e1ydmvdg3"><span class="css-oxvjfq-ButtonIcon e1ydmvdg4"><svg width="24" height="24" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1681 12.0499C11.9449 12.5565 11.6808 13.0228 11.3748 13.4515C10.9577 14.036 10.6161 14.4405 10.3529 14.6652C9.94486 15.0339 9.50768 15.2228 9.03954 15.2335C8.70346 15.2335 8.29816 15.1396 7.82638 14.9489C7.35304 14.7592 6.91805 14.6652 6.52031 14.6652C6.10317 14.6652 5.65579 14.7592 5.17727 14.9489C4.69801 15.1396 4.31193 15.2389 4.01674 15.2488C3.56782 15.2676 3.12035 15.0733 2.6737 14.6652C2.38862 14.4208 2.03205 14.002 1.60489 13.4086C1.14659 12.7749 0.769795 12.0401 0.47461 11.2023C0.158477 10.2974 0 9.42119 0 8.57287C0 7.60113 0.21367 6.76302 0.641648 6.06069C0.978001 5.49655 1.42547 5.05154 1.98551 4.72485C2.54555 4.39816 3.15068 4.23169 3.80235 4.22104C4.15892 4.22104 4.62651 4.32942 5.2076 4.54244C5.78704 4.75618 6.15909 4.86457 6.32221 4.86457C6.44417 4.86457 6.85748 4.73783 7.55815 4.48516C8.22075 4.25084 8.77997 4.15382 9.23809 4.19204C10.4795 4.29049 11.4121 4.77139 12.0324 5.63779C10.9221 6.29886 10.3729 7.22477 10.3839 8.41257C10.3939 9.33777 10.7354 10.1077 11.4067 10.719C11.7109 11.0027 12.0506 11.222 12.4286 11.3777C12.3466 11.6113 12.2601 11.8351 12.1681 12.0499ZM9.32097 1.04008C9.32097 1.76525 9.05138 2.44233 8.51402 3.06904C7.86554 3.81406 7.08117 4.24457 6.23059 4.17664C6.21975 4.08964 6.21347 3.99808 6.21347 3.90187C6.21347 3.20571 6.52186 2.46068 7.06951 1.85152C7.34293 1.54309 7.69067 1.28664 8.11236 1.08206C8.53314 0.880533 8.93116 0.769085 9.30549 0.75C9.31642 0.846943 9.32097 0.943893 9.32097 1.04007V1.04008Z" fill="black"></path></svg></span><span class="css-1fy0ir9-ButtonText e1ydmvdg5">Continue with Apple</span></button></div></div></div></form></div></div></div>
+<script type="text/javascript" src="./unified-lire.bundle.js.download"></script>
+
+</body></html>
