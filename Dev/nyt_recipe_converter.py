@@ -28,11 +28,11 @@ NOTES:
 import urllib.request
 
 _recipe_url = "https://cooking.nytimes.com/recipes/***" # *** to be replaced by the recipe number
-_max_fails = 20
+_max_fails = 1000
 _save_directory = "ScrapedRecipes/"
 
 
-def get_recipe_number():
+def user_recipe_number():
 	recipe_number = 0
 
 	try:
@@ -177,7 +177,7 @@ def get_recipe_steps(html_data):
 	return recipe_steps
 
 
-def generate_recipe_file(html_data):
+def generate_recipe_file(html_data, recipe_number):
 	recipe_title = get_recipe_title(html_data)
 	recipe_author = get_recipe_author(html_data)
 	recipe_rating = get_recipe_rating(html_data)
@@ -185,9 +185,9 @@ def generate_recipe_file(html_data):
 	recipe_ingredients = get_recipe_ingredients(html_data)
 	recipe_steps = get_recipe_steps(html_data)
 
-	file_name = recipe_title.replace(" ", "") + ".txt"
+	file_name = recipe_title.replace(" ", "") + "-" + str (recipe_number) + ".txt"
 
-	with open(file_name, 'w', encoding='utf-8') as file:
+	with open(_save_directory + file_name, 'w', encoding='utf-8') as file:
 		file.write(recipe_title + "\n\n")
 		file.write(recipe_author + "\n\n")
 		file.write(recipe_rating + "\n\n")
@@ -204,15 +204,15 @@ def generate_recipe_file(html_data):
 	print("\nGenerated the recipe file: " + file_name)
 
 
-def scrape_recipes():
-	page_number = 1
+def scrape_recipes(recipe_number):
 	fails = 0
 	successes = 0
 
 	while True:
 		try:
-			html_data = get_html_data(page_number)
-			generate_recipe_file(html_data)
+			html_data = get_html_data(recipe_number)
+			stripped_html_data = strip_content(html_data)
+			generate_recipe_file(stripped_html_data, recipe_number)
 			
 			fails = 0
 			successes += 1
@@ -221,18 +221,14 @@ def scrape_recipes():
 
 
 		except:
-			raise
-			#fails += 1
-			#print(f"Failed to get recipe page {fails} times.")
+			fails += 1
+			print(f"Failed to get recipe page {fails} times.")
 
-			#if fails >= _max_fails:
-				#print("Maximum number of failed attempts. Stopping.")
-				#break
+			if fails >= _max_fails:
+				print("Maximum number of failed attempts. Stopping.")
+				break
 
-		page_number += 1
+		recipe_number += 1
 
 
-recipe_number = get_recipe_number()
-html_data = get_html_data(recipe_number)
-stripped_html_data = strip_content(html_data)
-generate_recipe_file(stripped_html_data)
+scrape_recipes(1)
